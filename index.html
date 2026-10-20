@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5f2">
+  <meta name="description" content="Conheça cada ambiente de forma imersiva e explore projetos arquitetônicos de qualquer lugar.">
+  <title>Espaço 3D — criado por Felipe Gabriel Horácio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Cpath d='M9 21V13l7-4 7 4v8l-7 4z' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/inicio.css">
+  <link rel="prefetch" href="assets/apartamento.glb">
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="./" aria-label="Espaço 3D — criado por Felipe Gabriel Horácio">
+      <svg class="marca-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16.5v-9L12 3.5l7 4v9l-7 4z M5 7.5l7 4 7-4 M12 11.5v9"/></svg>
+      <span class="marca-nome">Espaço 3D</span>
+      <span class="marca-autor">— criado por Felipe Gabriel Horácio</span>
+    </a>
+  </header>
+
+  <main class="conteudo">
+    <section class="apresentacao">
+      <h1>Explore espaços.<br>Viva projetos.</h1>
+      <p>Conheça cada ambiente de forma imersiva e explore projetos arquitetônicos de qualquer lugar.</p>
+    </section>
+
+    <section class="projetos" aria-labelledby="titulo-projetos">
+      <div class="projetos-topo">
+        <h2 id="titulo-projetos">Projetos</h2>
+        <span id="contagem" class="contagem"></span>
+      </div>
+      <div id="lista" class="lista"></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <span>Espaço 3D — criado por Felipe Gabriel Horácio</span>
+    <span class="rodape-dica">Funciona no computador, tablet e celular.</span>
+  </footer>
+
+  <script type="module" src="js/inicio.js"></script>
+</body>
+</html>

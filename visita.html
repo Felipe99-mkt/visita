@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#111111">
+  <title>Residência contemporânea · Espaço 3D</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/examples/jsm/",
+      "three-mesh-bvh": "./vendor/three-mesh-bvh/index.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Tela de carregamento -->
+  <div id="carregando" class="tela">
+    <h1>Residência contemporânea</h1>
+    <div class="barra"><div id="barra-progresso"></div></div>
+    <p id="texto-progresso">Baixando o apartamento… 0%</p>
+  </div>
+
+  <!-- Tela inicial / pausa -->
+  <div id="inicio" class="tela escondido">
+    <h1>Residência contemporânea</h1>
+    <button id="botao-entrar">Clique para entrar</button>
+    <a class="voltar-projetos" href="./">← Voltar aos projetos</a>
+    <div class="instrucoes so-pc">
+      <div><b>W A S D</b> ou <b>setas</b> andar</div>
+      <div><b>Mouse</b> olhar</div>
+      <div><b>Shift</b> correr</div>
+      <div><b>Espaço</b> pular</div>
+      <div><b>ESC</b> soltar o mouse / pausar</div>
+      <div><b>M</b> minimapa · <b>F</b> FPS</div>
+      <div class="debug-titulo">Depuração</div>
+      <div><b>V</b> mostrar colisão · <b>N</b> modo voo (Espaço sobe, C desce)</div>
+      <div><b>P</b> imprimir posição · <b>R</b> voltar ao início</div>
+      <div>O painel de ajustes aparece no canto quando o jogo está pausado.</div>
+    </div>
+    <div class="instrucoes so-toque">
+      <div><b>Polegar esquerdo</b> no círculo: andar</div>
+      <div><b>Arraste o dedo direito</b> na tela: olhar</div>
+      <div><b>⤒</b> pular · <b>»</b> correr · <b>☰</b> pausar e ajustes</div>
+      <div class="dica-girar">Dica: gire o celular para jogar deitado.</div>
+    </div>
+  </div>
+
+  <div id="erro" class="tela escondido"></div>
+
+  <!-- HUD -->
+  <div id="mira"></div>
+  <div id="fps" class="escondido">-- FPS</div>
+  <div id="modo" class="escondido"></div>
+  <div id="aviso" class="escondido"></div>
+  <canvas id="minimapa" class="escondido"></canvas>
+
+  <!-- Controles de toque (celular/tablet) -->
+  <div id="toque" class="escondido">
+    <div id="joystick"><div id="joystick-pino"></div></div>
+    <button id="bt-pular" class="bt-toque" aria-label="Pular">⤒</button>
+    <button id="bt-correr" class="bt-toque" aria-label="Correr">»</button>
+    <button id="bt-menu" class="bt-toque bt-pequeno" aria-label="Pausar">☰</button>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
